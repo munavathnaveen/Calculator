@@ -2,7 +2,7 @@ let buttons=document.querySelectorAll("#btn");
 let input=document.getElementById("screen");
 let flag=false;
 let string="";
-//to check weather it is operator of number
+//to check weather it is operator or number
 function fun(e)
 {
     const array=['+','-','*','%','/'];
@@ -47,7 +47,7 @@ for(let btn of buttons)
         }
         else if(current_value==='+' || current_value==='*' || current_value==='/' || current_value==='%')
         {
-            //to replace all the operators before the curent operator if exis
+            //to replace all the operators before the curent operator if exist
             while(fun(string[string.length-1]))
             {
                 string=string.slice(0,-1);
@@ -60,7 +60,7 @@ for(let btn of buttons)
         }
         else if(current_value==='-')
         {
-            //to replace with - with + if exist
+            //to replace  + with - if exist
             if(string[string.length-1]==='+' || string[string.length-1]==='-' || string[string.length-1]==='%')
             {
                 string=string.slice(0,-1);
